@@ -23,5 +23,6 @@ while beerBottles > 0:
      beerBottles -= 1
 
 #Breaks loop since its now less than 0
+
 #When there is no more, print message
 print("Time to buy more beer!")
