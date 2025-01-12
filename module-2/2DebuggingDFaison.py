@@ -1,4 +1,5 @@
-#DeJanae Faison  2.2 Assignment
+#DeJanae Faison  2.2 Assignment 
+#Debugging Assignment
 def dogs():
     #List of Dog Breeds
     dogsTuple=('Bulldog','Beagle','Rottweiler','Dachshund','Poodle','Chihuahua',
