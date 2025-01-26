@@ -4,15 +4,17 @@ import sitka_highs as highs
 import sitka_lows as lows
 import tkinter as tk
 from tkinter import messagebox
-
+#Button function if high is selected
 def highAction():
     highs.plt.show()
     print("Button pressed")
-
+    
+#Button funtion if low is selected
 def lowAction():
     lows.plt.show()
     print("Low pressed")
-
+    
+#Funtion to exit program but display message
 def exitAction():
     
     messagebox.showinfo("Exit Program","Have a good day")
@@ -20,13 +22,13 @@ def exitAction():
 
 root = tk.Tk()
 root.title("Main Menu")
-
+#Header
 Label = tk.Label(root,text="High/Low Temperatures", font=('Verdana',15)).pack(side= "top", pady=10)
-
+#Subheader
 subLabel = tk.Label(root,text="Select to see record tempratures", font=('Verdana',10)).pack(side= "top", pady=10)
-
+#Window size
 root.minsize(300,300)
-
+#Buttons
 highButton = tk.Button(root, text = "High",width= 10,command= highAction)
 highButton.pack(pady= 10)
 
