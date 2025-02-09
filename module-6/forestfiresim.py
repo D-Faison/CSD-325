@@ -70,6 +70,10 @@ def main():
                             # Fire spreads to neighboring trees:
                             if forest.get((x + ix, y + iy)) == TREE:
                                 nextForest[(x + ix, y + iy)] = FIRE
+
+                            #If the fire passes over the lake, snuff the fire
+                            elif forest.get((x + ix, y + iy)) == LAKE:
+                                nextForest[(x + ix, y + iy)] = LAKE
                     # The tree has burned down now, so erase it:
                     nextForest[(x, y)] = EMPTY
                 else:
@@ -139,3 +143,6 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt:
         sys.exit()  # When Ctrl-C is pressed, end the program.
+
+#Source:
+#OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/chat
