@@ -4,6 +4,8 @@ import json
 #file handling
 from os import path
 
+from notifypy import Notify
+
 
 fileName = 'students.json'
 stundentInfo = []
@@ -36,6 +38,20 @@ def formattedValues():
 
 listofStudents = formattedValues()
 
+def notification():
+    notification = Notify()
+    notification.title = "Student List"
+    notification.message = "Viewing Original Student List in Terminal "
+    notification.send()
+notification()
+
+
+
+
+
+c = input("Add a new student? Y or N?\n")
+while c == "Y":
+   break
 
 stundentInfo.append({
     "F_Name":"DeJanae",
@@ -51,14 +67,15 @@ with open (fileName) as file:
     #load file
     stundentInfo = json.load(file)
 
-
-c = input("Add a new student? Y or N?\n")
-while c == "Y":
-   break
 print("~Updated List~\n")
 formattedValues()
 
-
+def upDATEotification():
+    notification = Notify()
+    notification.title = "Student List"
+    notification.message = "Viewing Updated Student List in Terminal "
+    notification.send()
+upDATEotification()
 
 
 
@@ -67,4 +84,6 @@ formattedValues()
 #Resources:
 #importing json file source:
 #Gupta, L. (2021, July 4). Python - Append to JSON File. HowToDoInJava. https://howtodoinjava.com/python-json/append-json-to-file/
+#Notifications
+#Client Challenge. (2025). Pypi.org. https://pypi.org/project/notify_py/
 
